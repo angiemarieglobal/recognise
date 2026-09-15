@@ -1,0 +1,497 @@
+<!doctype html>
+<!-- The Belief List v1.0, built 15 September 2026. Recognise companion two. -->
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Belief List · Recognise</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Station five, and how to stop stalling there.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold:#D09E69; --umber:#5D3520; --clay:#8A6238; --sand:#B7A184;
+  --ivory:#E6DAC2; --oat:#F2E9D5; --pale:#FBF7EE; --espresso:#2A1711;
+  --serif:'Forum', 'Georgia', 'Times New Roman', serif;
+  --sans:'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --pad:clamp(20px, 5vw, 40px);
+}
+* { box-sizing:border-box; }
+html { -webkit-text-size-adjust:100%; }
+body {
+  margin:0; background:var(--pale); color:var(--espresso);
+  font-family:var(--sans); font-weight:300; font-size:16px; line-height:1.66;
+}
+img { max-width:100%; display:block; }
+[hidden] { display:none !important; }
+
+.wrap { max-width:720px; margin:0 auto; padding:0 var(--pad) 72px; }
+
+/* ---- banner hero ---------------------------------------------------- */
+.hero img { width:100%; height:auto; }
+.bars { display:flex; height:8px; }
+.bars i { flex:1; }
+.bars i:nth-child(1) { background:var(--clay); }
+.bars i:nth-child(2) { background:var(--gold); }
+.bars i:nth-child(3) { background:var(--sand); }
+.bars i:nth-child(4) { background:var(--ivory); }
+
+.eyebrow {
+  font-family:var(--sans); font-weight:500; font-size:11px;
+  letter-spacing:.28em; text-transform:uppercase; color:var(--clay);
+  margin:34px 0 10px;
+}
+h1 {
+  font-family:var(--serif); font-weight:400; color:var(--umber);
+  font-size:clamp(34px, 8vw, 52px); line-height:1.08; margin:0 0 18px;
+}
+h2 {
+  font-family:var(--serif); font-weight:400; color:var(--umber);
+  font-size:clamp(24px, 5.4vw, 34px); line-height:1.16; margin:0 0 14px;
+}
+h3 {
+  font-family:var(--serif); font-weight:400; color:var(--umber);
+  font-size:clamp(21px, 4.6vw, 27px); line-height:1.2; margin:0;
+}
+.standfirst {
+  font-family:var(--serif); font-style:italic; color:var(--clay);
+  font-size:clamp(19px, 4.2vw, 23px); line-height:1.4; margin:0 0 22px;
+}
+.rule { width:64px; height:2px; background:var(--gold); border:0; margin:0 0 30px; }
+p { margin:0 0 17px; }
+p:last-child { margin-bottom:0; }
+
+/* ---- cards ----------------------------------------------------------- */
+.card {
+  background:var(--oat); border-left:3.5px solid var(--gold);
+  padding:clamp(20px, 4.4vw, 30px); margin:26px 0;
+}
+.card.plain { border-left-color:var(--ivory); }
+.pull {
+  font-family:var(--serif); font-size:clamp(18px, 4vw, 21px);
+  line-height:1.45; color:var(--umber);
+}
+
+/* ---- buttons --------------------------------------------------------- */
+.btn {
+  display:inline-block; border:0; cursor:pointer; font-family:var(--sans);
+  font-weight:600; font-size:12px; letter-spacing:.2em; text-transform:uppercase;
+  padding:19px 38px; background:var(--umber); color:var(--pale);
+  text-decoration:none; transition:background .16s ease;
+}
+.btn:hover { background:var(--espresso); }
+.btn.ghost { background:transparent; color:var(--clay); box-shadow:inset 0 0 0 1.5px var(--ivory); }
+.btn.ghost:hover { background:var(--oat); color:var(--umber); }
+/* A disabled button gets a lighter palette colour, never opacity. Fading umber
+   over oat lands on grey, and there is no grey anywhere else in Recognise. */
+.btn[disabled] { background:var(--sand); color:var(--pale); cursor:not-allowed; }
+.btn[disabled]:hover { background:var(--sand); }
+.acts { display:flex; flex-wrap:wrap; gap:14px; margin-top:32px; }
+.backlink {
+  background:none; border:0; cursor:pointer; padding:10px 0; margin-top:26px;
+  font-family:var(--sans); font-size:11px; font-weight:500; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--sand);
+}
+.backlink:hover { color:var(--clay); }
+
+/* ---- progress -------------------------------------------------------- */
+.meta {
+  display:flex; justify-content:space-between; align-items:baseline;
+  font-size:10.5px; font-weight:500; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--sand); margin:30px 0 12px;
+}
+.track { height:3px; background:var(--ivory); margin-bottom:34px; }
+.track i { display:block; height:100%; background:var(--gold); transition:width .3s ease; }
+
+/* ---- belief options -------------------------------------------------- */
+.opts { list-style:none; margin:0; padding:0; }
+.opt {
+  width:100%; text-align:left; cursor:pointer; display:flex; gap:15px;
+  align-items:flex-start; background:var(--pale); color:var(--espresso);
+  border:0; box-shadow:inset 0 0 0 1.5px var(--ivory);
+  padding:17px 20px; margin-bottom:11px; font-family:var(--serif);
+  font-size:clamp(17px, 3.9vw, 19.5px); line-height:1.35;
+  transition:box-shadow .14s ease, background .14s ease;
+}
+.opt:hover { box-shadow:inset 0 0 0 1.5px var(--sand); }
+.opt .box {
+  flex:0 0 auto; width:19px; height:19px; margin-top:3px;
+  box-shadow:inset 0 0 0 1.5px var(--sand); background:var(--pale);
+  position:relative;
+}
+.opt[aria-pressed="true"] { background:var(--oat); box-shadow:inset 0 0 0 1.5px var(--gold); }
+.opt[aria-pressed="true"] .box { background:var(--gold); box-shadow:inset 0 0 0 1.5px var(--gold); }
+.opt[aria-pressed="true"] .box::after {
+  content:""; position:absolute; left:6px; top:2px; width:5px; height:10px;
+  border:solid #FBF7EE; border-width:0 2px 2px 0; transform:rotate(43deg);
+}
+.cap { font-size:13px; color:var(--clay); margin:-4px 0 22px; }
+
+/* ---- results --------------------------------------------------------- */
+.theone {
+  font-family:var(--serif); color:var(--umber);
+  font-size:clamp(27px, 6.4vw, 40px); line-height:1.16; margin:0 0 6px;
+}
+.nearly { list-style:none; margin:14px 0 0; padding:0; }
+.nearly li {
+  font-family:var(--serif); font-size:17px; color:var(--clay);
+  padding:8px 0 8px 18px; border-left:2px solid var(--ivory);
+}
+.maps { display:flex; flex-wrap:wrap; gap:9px; margin-top:14px; }
+.maps b {
+  font-family:var(--serif); font-weight:400; font-size:18px; color:var(--umber);
+  background:var(--pale); box-shadow:inset 0 0 0 1.5px var(--gold);
+  padding:7px 15px;
+}
+.label {
+  font-size:10.5px; font-weight:500; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--gold); margin:0 0 9px;
+}
+textarea {
+  width:100%; min-height:104px; resize:vertical; background:var(--pale);
+  border:0; box-shadow:inset 0 0 0 1.5px var(--ivory); padding:15px 17px;
+  font-family:var(--serif); font-size:18px; line-height:1.5; color:var(--espresso);
+}
+textarea:focus { outline:0; box-shadow:inset 0 0 0 1.5px var(--gold); }
+
+footer {
+  border-top:1px solid var(--ivory); margin-top:60px; padding-top:22px;
+  font-size:10.5px; font-weight:500; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--sand);
+  display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;
+}
+.fallback { font-size:13px; color:var(--clay); margin-top:14px; }
+
+/* ---- print ----------------------------------------------------------- */
+@media print {
+  body { background:#fff; }
+  .hero, .bars, .acts, .backlink, footer, .fallback { display:none !important; }
+  .wrap { max-width:none; padding:0; }
+  .card { break-inside:avoid; }
+  #card { display:block !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <img src="../assets/recognise-banner.jpg" alt="Recognise" width="1280" height="581">
+  <div class="bars"><i></i><i></i><i></i><i></i></div>
+</div>
+
+<div class="wrap">
+
+<!-- ====================== INTRO ====================== -->
+<section id="s-intro">
+  <p class="eyebrow">Recognise · Companion Two</p>
+  <h1>The Belief List</h1>
+  <p class="standfirst">Station five, and how to stop stalling there.</p>
+  <hr class="rule">
+  <h2>Before You Read It</h2>
+  <div>
+        <p>Station five is where almost everyone stops.</p>
+        <p>Not because the belief is hard to find. Because it is embarrassingly plain when it arrives. It is usually six or seven words long, it sounds like something a tired child would say, and people look at it and think, that cannot be it, that is far too simple to have cost me this much.</p>
+        <p>It is it. They are always that plain. A belief survives thirty years unexamined precisely because it is too obvious to question.</p>
+        <p>So this is not a list to choose from. It is a list to be caught by.</p>
+  </div>
+  <div class="card">
+        <p>Read it slowly. You are not looking for the one that sounds cleverest or the one you would be least ashamed of. You are looking for the one that makes your chest go tight, or the one you skimmed past a little too fast.</p>
+        <p>Then write it in your own words on station five. The wording matters more than the accuracy. Yours will have a particular phrase in it that mine does not.</p>
+  </div>
+  <div class="acts">
+    <button class="btn" id="go">Start reading</button>
+  </div>
+</section>
+
+<!-- ====================== PASS ONE ====================== -->
+<section id="s-scan" hidden>
+  <div class="meta"><span id="scan-count"></span><span id="scan-picked"></span></div>
+  <div class="track"><i id="scan-bar"></i></div>
+  <h3 id="scan-name"></h3>
+  <p class="cap" id="scan-nums"></p>
+  <ul class="opts" id="scan-opts"></ul>
+  <div class="acts">
+    <button class="btn" id="scan-next">Next</button>
+  </div>
+  <button class="backlink" id="scan-back">Back</button>
+</section>
+
+<!-- ====================== NARROWING ====================== -->
+<section id="s-cut" hidden>
+  <p class="eyebrow" id="cut-eyebrow"></p>
+  <h2 id="cut-title"></h2>
+  <p class="cap" id="cut-hint"></p>
+  <ul class="opts" id="cut-opts"></ul>
+  <div class="acts">
+    <button class="btn" id="cut-next">Next</button>
+  </div>
+  <button class="backlink" id="cut-back">Back</button>
+</section>
+
+<!-- ====================== NOTHING LANDED ====================== -->
+<section id="s-none" hidden>
+  <p class="eyebrow">Recognise · Companion Two</p>
+  <h2>If None Of Them Fit</h2>
+  <hr class="rule">
+  <div>
+        <p>Then yours is close to one of these and wearing different clothes, and that is worth more than a match.</p>
+        <p>Go back to the one that was nearly right and ask what is wrong with it. The correction is usually the belief.</p>
+        <p>And if you find yourself deciding which one you ought to have, stop. The one you ought to have is a thought. The one that made you go quiet is the belief.</p>
+  </div>
+  <div class="card"><p class="pull">It will be too simple. That is how you know you have found it.</p></div>
+  <div class="acts">
+    <button class="btn" id="none-again">Read it again</button>
+  </div>
+</section>
+
+<!-- ====================== RESULT ====================== -->
+<section id="s-done" hidden>
+  <div id="card">
+    <p class="eyebrow">Station five</p>
+    <p class="theone" id="one-text"></p>
+    <p class="cap" id="one-cluster"></p>
+    <hr class="rule">
+
+    <div class="card plain">
+      <p class="label">Your maps</p>
+      <p style="margin:0 0 4px">A belief in this cluster usually sits under these patterns. If you have
+      The Sixteen Loop Maps, these are the pages worth opening.</p>
+      <div class="maps" id="one-maps"></div>
+    </div>
+
+    <div id="nearly-block" hidden>
+      <p class="label">The ones that nearly were</p>
+      <ul class="nearly" id="nearly-list"></ul>
+    </div>
+
+    <div class="card">
+      <p class="label">Station five, in your own words</p>
+      <p class="cap" style="margin:0 0 12px">Not the one you ought to have. The one that made you go quiet.</p>
+      <textarea id="own" placeholder="Write it the way you would say it out loud."></textarea>
+    </div>
+
+    <div class="card plain">
+      <p class="label">What to do with it</p>
+      <p style="margin:0">Write it on station five of your Loop Map, in your own words, and stop
+      there. Naming it is the whole of this work. Catching it in the moment and
+      turning it is the practice, and that is what the Baseline Membership is for.</p>
+    </div>
+  </div>
+
+  <div class="acts">
+    <button class="btn" id="save">Download this page</button>
+    <button class="btn ghost" id="restart">Start again</button>
+  </div>
+  <p class="fallback" id="fallback" hidden>If the download does not start, screenshot this card, or
+  open the page in Safari or Chrome rather than the in-app browser.</p>
+</section>
+
+<footer>
+  <span>Recognise · Angie Marie Global</span>
+  <span>Abundance is your baseline</span>
+</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+"use strict";
+var CLUSTERS = [{"name": "The Fuel", "nums": "01 · 05 · 13", "maps": [1, 5, 13], "items": ["If I stop, it all falls apart.", "Rest has to be earned.", "Slowing down is how you lose.", "If I am not needed, I am not valuable.", "Empty time is wasted time."]}, {"name": "The Yes", "nums": "02 · 06 · 14", "maps": [2, 6, 14], "items": ["I am only loved when I am useful.", "Needing help means I am a burden.", "If I say no, they go.", "My needs come last, or I am selfish.", "Being wanted is safer than being known."]}, {"name": "The Grip", "nums": "03 · 07", "maps": [3, 7], "items": ["If I let go, it gets done wrong.", "Nobody can do it the way I can.", "Trusting people costs more than doing it myself.", "My worth is in the doing."]}, {"name": "The Silence", "nums": "04 · 08 · 15", "maps": [4, 8, 15], "items": ["Conflict means the end of something.", "If I say the true thing, I lose them.", "Keeping the peace is my job.", "Being difficult is the worst thing I could be.", "If I stop watching, I get caught out."]}, {"name": "The Chase", "nums": "09 · 10 · 16", "maps": [9, 10, 16], "items": ["I am only as good as the last thing I did.", "If it is not perfect, it is not safe to show.", "Wanting it too much is how you lose it.", "Enough has never once arrived.", "Feeling it is not the point. Moving is the point."]}, {"name": "The Exit", "nums": "11 · 12", "maps": [11, 12], "items": ["I am not allowed to want a different life.", "If I felt it properly, it would break me.", "The only way out is all the way out.", "This is what life costs."]}];
+var TOTAL = 28;
+
+/* Every belief flattened once, so an index is a stable identity all the way
+   through. The narrowing passes carry indices, never strings, because two
+   clusters could one day hold beliefs that read alike. */
+var ALL = [];
+CLUSTERS.forEach(function (c, ci) {
+  c.items.forEach(function (t) { ALL.push({ text: t, ci: ci }); });
+});
+
+var step = 0;          /* which cluster we are reading */
+var picked = [];       /* indices into ALL, pass one */
+var shortlist = [];    /* indices, pass two */
+var chosen = null;     /* index, the one */
+var cutStage = 0;      /* 0 none, 1 cut to three, 2 cut to one */
+
+function $(id) { return document.getElementById(id); }
+function show(id) {
+  ["s-intro", "s-scan", "s-cut", "s-none", "s-done"].forEach(function (s) {
+    $(s).hidden = (s !== id);
+  });
+  window.scrollTo({ top: 0, behavior: "instant" });
+}
+function offset(ci) {
+  var n = 0;
+  for (var i = 0; i < ci; i++) { n += CLUSTERS[i].items.length; }
+  return n;
+}
+
+/* ---- pass one, six clusters, tick anything that lands ----------------- */
+function renderScan() {
+  var c = CLUSTERS[step], base = offset(step);
+  $("scan-count").textContent = "Cluster " + (step + 1) + " of " + CLUSTERS.length;
+  $("scan-picked").textContent = picked.length === 1
+    ? "1 ticked" : picked.length + " ticked";
+  $("scan-bar").style.width = ((step + 1) / CLUSTERS.length * 100) + "%";
+  $("scan-name").textContent = c.name;
+  $("scan-nums").textContent = "Patterns " + c.nums;
+  $("scan-opts").innerHTML = "";
+  c.items.forEach(function (t, i) {
+    var idx = base + i, on = picked.indexOf(idx) > -1;
+    var li = document.createElement("li");
+    var b = document.createElement("button");
+    b.className = "opt"; b.type = "button";
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+    b.innerHTML = '<span class="box"></span><span></span>';
+    b.lastChild.textContent = t;
+    b.onclick = function () {
+      var at = picked.indexOf(idx);
+      if (at > -1) { picked.splice(at, 1); } else { picked.push(idx); }
+      renderScan();
+    };
+    li.appendChild(b); $("scan-opts").appendChild(li);
+  });
+  $("scan-next").textContent = step === CLUSTERS.length - 1 ? "Done reading" : "Next";
+  $("scan-back").hidden = step === 0;
+}
+
+/* ---- narrowing -------------------------------------------------------- */
+function startCut() {
+  if (picked.length === 0) { show("s-none"); return; }
+  if (picked.length === 1) { chosen = picked[0]; shortlist = []; finish(); return; }
+  if (picked.length <= 3) { shortlist = picked.slice(); cutStage = 2; renderCut(); return; }
+  cutStage = 1; renderCut();
+}
+
+function renderCut() {
+  var pool = cutStage === 1 ? picked : shortlist;
+  var target = cutStage === 1 ? 3 : 1;
+  var sel = cutStage === 1 ? shortlist : (chosen === null ? [] : [chosen]);
+
+  $("cut-eyebrow").textContent = cutStage === 1 ? "Narrowing" : "The one";
+  $("cut-title").textContent = cutStage === 1
+    ? "You ticked " + picked.length + ". Cut it to three."
+    : "Now one.";
+  $("cut-hint").textContent = cutStage === 1
+    ? "Not the three that are most true. The three you would least like to say out loud."
+    : "The one that made your chest go tight, or the one you skimmed past a little too fast.";
+
+  $("cut-opts").innerHTML = "";
+  pool.forEach(function (idx) {
+    var on = sel.indexOf(idx) > -1;
+    var li = document.createElement("li");
+    var b = document.createElement("button");
+    b.className = "opt"; b.type = "button";
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+    b.innerHTML = '<span class="box"></span><span></span>';
+    b.lastChild.textContent = ALL[idx].text;
+    b.onclick = function () {
+      if (cutStage === 1) {
+        var at = shortlist.indexOf(idx);
+        if (at > -1) { shortlist.splice(at, 1); }
+        else if (shortlist.length < 3) { shortlist.push(idx); }
+      } else {
+        chosen = (chosen === idx) ? null : idx;
+      }
+      renderCut();
+    };
+    li.appendChild(b); $("cut-opts").appendChild(li);
+  });
+
+  var ready = cutStage === 1 ? shortlist.length > 0 : chosen !== null;
+  $("cut-next").disabled = !ready;
+  $("cut-next").textContent = cutStage === 1
+    ? (shortlist.length === target ? "Next" : "Next (" + shortlist.length + " of 3)")
+    : "This is the one";
+}
+
+/* ---- result ----------------------------------------------------------- */
+function finish() {
+  var one = ALL[chosen], c = CLUSTERS[one.ci];
+  $("one-text").textContent = one.text;
+  $("one-cluster").textContent = c.name + " · patterns " + c.nums;
+
+  $("one-maps").innerHTML = "";
+  c.maps.forEach(function (n) {
+    var b = document.createElement("b");
+    b.textContent = "Map " + (n < 10 ? "0" + n : n);
+    $("one-maps").appendChild(b);
+  });
+
+  var rest = shortlist.filter(function (i) { return i !== chosen; });
+  $("nearly-block").hidden = rest.length === 0;
+  $("nearly-list").innerHTML = "";
+  rest.forEach(function (i) {
+    var li = document.createElement("li");
+    li.textContent = ALL[i].text;
+    $("nearly-list").appendChild(li);
+  });
+
+  show("s-done");
+}
+
+/* ---- the PDF ---------------------------------------------------------- */
+function stamp() {
+  var d = new Date();
+  return d.getFullYear() + "-" +
+    String(d.getMonth() + 1).padStart(2, "0") + "-" +
+    String(d.getDate()).padStart(2, "0");
+}
+
+function save() {
+  /* A textarea's typed value lives in the DOM property, not the attribute, so
+     html2canvas renders it empty. Mirror it into a real element for the
+     capture, then put the textarea back. */
+  var ta = $("own"), mirror = document.createElement("p");
+  mirror.style.cssText = "font-family:Forum,Georgia,serif;font-size:18px;" +
+    "line-height:1.5;color:#2A1711;margin:0;min-height:26px;white-space:pre-wrap";
+  mirror.textContent = ta.value || "";
+  ta.parentNode.replaceChild(mirror, ta);
+
+  var restore = function () { mirror.parentNode.replaceChild(ta, mirror); };
+
+  if (typeof html2pdf === "undefined") {
+    restore(); $("fallback").hidden = false; window.print(); return;
+  }
+  html2pdf().set({
+    filename: "recognise-the-belief-list-" + stamp() + ".pdf",
+    margin: 12,
+    image: { type: "jpeg", quality: 0.94 },
+    html2canvas: { scale: 2, backgroundColor: "#FBF7EE", useCORS: true },
+    jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+  }).from($("card")).save().then(restore).catch(function () {
+    restore(); $("fallback").hidden = false;
+  });
+}
+
+/* ---- wiring ----------------------------------------------------------- */
+$("go").onclick = function () { step = 0; renderScan(); show("s-scan"); };
+
+$("scan-next").onclick = function () {
+  if (step < CLUSTERS.length - 1) { step++; renderScan(); window.scrollTo({top:0,behavior:"instant"}); }
+  else { startCut(); if (picked.length > 1) { show("s-cut"); } }
+};
+$("scan-back").onclick = function () {
+  if (step > 0) { step--; renderScan(); window.scrollTo({top:0,behavior:"instant"}); }
+};
+
+$("cut-next").onclick = function () {
+  if (cutStage === 1) { cutStage = 2; chosen = null; renderCut(); window.scrollTo({top:0,behavior:"instant"}); }
+  else { finish(); }
+};
+$("cut-back").onclick = function () {
+  if (cutStage === 2 && picked.length > 3) { cutStage = 1; renderCut(); }
+  else { step = CLUSTERS.length - 1; renderScan(); show("s-scan"); }
+};
+
+$("none-again").onclick = function () { step = 0; renderScan(); show("s-scan"); };
+
+$("save").onclick = save;
+$("restart").onclick = function () {
+  picked = []; shortlist = []; chosen = null; cutStage = 0; step = 0;
+  $("own").value = ""; renderScan(); show("s-intro");
+};
+</script>
+</body>
+</html>
