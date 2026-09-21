@@ -1,0 +1,403 @@
+<!doctype html>
+<!-- The Sixteen Loop Maps v1.1, built 21 September 2026. Recognise companion one. -->
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Sixteen Loop Maps · Recognise</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold:#D09E69; --umber:#5D3520; --clay:#8A6238; --sand:#B7A184;
+  --ivory:#E6DAC2; --oat:#F2E9D5; --pale:#FBF7EE; --espresso:#2A1711;
+  --serif:'Forum', 'Georgia', 'Times New Roman', serif;
+  --sans:'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --pad:clamp(20px, 5vw, 40px);
+}
+* { box-sizing:border-box; }
+html { -webkit-text-size-adjust:100%; }
+body {
+  margin:0; background:var(--pale); color:var(--espresso);
+  font-family:var(--sans); font-weight:300; font-size:16px; line-height:1.66;
+}
+img { max-width:100%; display:block; }
+[hidden] { display:none !important; }
+.wrap { max-width:720px; margin:0 auto; padding:0 var(--pad) 72px; }
+
+.hero img { width:100%; height:auto; }
+.bars { display:flex; height:8px; }
+.bars i { flex:1; }
+.bars i:nth-child(1) { background:var(--clay); }
+.bars i:nth-child(2) { background:var(--gold); }
+.bars i:nth-child(3) { background:var(--sand); }
+.bars i:nth-child(4) { background:var(--ivory); }
+
+.eyebrow {
+  font-family:var(--sans); font-weight:500; font-size:11px;
+  letter-spacing:.28em; text-transform:uppercase; color:var(--clay);
+  margin:34px 0 10px;
+}
+h1 { font-family:var(--serif); font-weight:400; color:var(--umber);
+     font-size:clamp(32px, 7.4vw, 50px); line-height:1.08; margin:0 0 18px; }
+h2 { font-family:var(--serif); font-weight:400; color:var(--umber);
+     font-size:clamp(24px, 5.4vw, 34px); line-height:1.16; margin:0 0 14px; }
+h3 { font-family:var(--serif); font-weight:400; color:var(--umber);
+     font-size:clamp(21px, 4.6vw, 27px); line-height:1.2; margin:0; }
+.standfirst { font-family:var(--serif); font-style:italic; color:var(--clay);
+  font-size:clamp(19px, 4.2vw, 23px); line-height:1.4; margin:0 0 22px; }
+.rule { width:64px; height:2px; background:var(--gold); border:0; margin:0 0 30px; }
+p { margin:0 0 17px; }
+p:last-child { margin-bottom:0; }
+
+.card { background:var(--oat); border-left:3.5px solid var(--gold);
+  padding:clamp(20px, 4.4vw, 30px); margin:26px 0; }
+.card.plain { border-left-color:var(--ivory); }
+.pull { font-family:var(--serif); font-size:clamp(18px, 4vw, 21px);
+  line-height:1.45; color:var(--umber); }
+
+.btn { display:inline-block; border:0; cursor:pointer; font-family:var(--sans);
+  font-weight:600; font-size:12px; letter-spacing:.2em; text-transform:uppercase;
+  padding:19px 38px; background:var(--umber); color:var(--pale);
+  text-decoration:none; transition:background .16s ease; }
+.btn:hover { background:var(--espresso); }
+.btn.ghost { background:transparent; color:var(--clay);
+  box-shadow:inset 0 0 0 1.5px var(--ivory); }
+.btn.ghost:hover { background:var(--oat); color:var(--umber); }
+/* A disabled button gets a lighter palette colour, never opacity. Fading umber
+   over oat lands on grey, and there is no grey anywhere else in Recognise. */
+.btn[disabled] { background:var(--sand); color:var(--pale); cursor:not-allowed; }
+.btn[disabled]:hover { background:var(--sand); }
+.acts { display:flex; flex-wrap:wrap; gap:14px; margin-top:32px; }
+.backlink { background:none; border:0; cursor:pointer; padding:10px 0;
+  margin-top:26px; font-family:var(--sans); font-size:11px; font-weight:500;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--sand); }
+.backlink:hover { color:var(--clay); }
+
+.meta { display:flex; justify-content:space-between; align-items:baseline;
+  font-size:10.5px; font-weight:500; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--sand); margin:30px 0 12px; }
+.track { height:3px; background:var(--ivory); margin-bottom:34px; }
+.track i { display:block; height:100%; background:var(--gold);
+  transition:width .3s ease; }
+
+.opts { list-style:none; margin:0; padding:0; }
+.opt { width:100%; text-align:left; cursor:pointer; display:flex; gap:15px;
+  align-items:flex-start; background:var(--pale); color:var(--espresso);
+  border:0; box-shadow:inset 0 0 0 1.5px var(--ivory);
+  padding:17px 20px; margin-bottom:11px; font-family:var(--serif);
+  font-size:clamp(17px, 3.9vw, 19.5px); line-height:1.35;
+  transition:box-shadow .14s ease, background .14s ease; }
+.opt:hover { box-shadow:inset 0 0 0 1.5px var(--sand); }
+.opt .box { flex:0 0 auto; width:19px; height:19px; margin-top:3px;
+  box-shadow:inset 0 0 0 1.5px var(--sand); background:var(--pale);
+  position:relative; }
+.opt[aria-pressed="true"] { background:var(--oat);
+  box-shadow:inset 0 0 0 1.5px var(--gold); }
+.opt[aria-pressed="true"] .box { background:var(--gold);
+  box-shadow:inset 0 0 0 1.5px var(--gold); }
+.opt[aria-pressed="true"] .box::after { content:""; position:absolute;
+  left:6px; top:2px; width:5px; height:10px; border:solid #FBF7EE;
+  border-width:0 2px 2px 0; transform:rotate(43deg); }
+.cap { font-size:13px; color:var(--clay); margin:-4px 0 22px; }
+
+.label { font-size:10.5px; font-weight:500; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--gold); margin:0 0 9px; }
+textarea { width:100%; min-height:132px; resize:vertical; background:var(--pale);
+  border:0; box-shadow:inset 0 0 0 1.5px var(--ivory); padding:15px 17px;
+  font-family:var(--serif); font-size:18px; line-height:1.5;
+  color:var(--espresso); }
+textarea:focus { outline:0; box-shadow:inset 0 0 0 1.5px var(--gold); }
+
+footer { border-top:1px solid var(--ivory); margin-top:60px; padding-top:22px;
+  font-size:10.5px; font-weight:500; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--sand);
+  display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+.fallback { font-size:13px; color:var(--clay); margin-top:14px; }
+
+/* ---- the sixteen picker --------------------------------------------- */
+.grid { list-style:none; margin:0; padding:0; display:grid; gap:11px;
+  grid-template-columns:1fr; }
+@media (min-width:560px) { .grid { grid-template-columns:1fr 1fr; } }
+.tile { width:100%; text-align:left; cursor:pointer; background:var(--pale);
+  border:0; box-shadow:inset 0 0 0 1.5px var(--ivory); padding:16px 18px;
+  transition:box-shadow .14s ease, background .14s ease; height:100%; }
+.tile:hover { background:var(--oat); box-shadow:inset 0 0 0 1.5px var(--gold); }
+.tile b { display:block; font-family:var(--serif); font-weight:400;
+  font-size:13px; color:var(--gold); letter-spacing:.06em; margin-bottom:3px; }
+.tile strong { display:block; font-family:var(--serif); font-weight:400;
+  font-size:21px; color:var(--umber); line-height:1.2; margin-bottom:5px; }
+.tile span { display:block; font-family:var(--sans); font-style:italic;
+  font-size:12.5px; line-height:1.45; color:var(--clay); }
+
+/* ---- the station walk ------------------------------------------------ */
+.station { display:flex; gap:15px; align-items:flex-start; }
+.badge { flex:0 0 auto; width:30px; height:30px; border-radius:50%;
+  background:var(--umber); color:var(--pale); font-family:var(--sans);
+  font-weight:500; font-size:13px; display:flex; align-items:center;
+  justify-content:center; margin-top:2px; }
+.prompt { font-size:13.5px; color:var(--sand); margin:4px 0 0; }
+.starter { font-family:var(--serif); font-style:italic; font-size:17px;
+  line-height:1.45; color:var(--clay); margin:0; }
+
+/* ---- the finished map ------------------------------------------------ */
+.mapline { border-top:1px solid var(--ivory); padding-top:18px; margin-top:18px; }
+.mapline:first-of-type { border-top:0; padding-top:0; margin-top:0; }
+.answer { font-family:var(--serif); font-size:18.5px; line-height:1.5;
+  color:var(--espresso); margin:7px 0 0; white-space:pre-wrap; }
+.answer.blank { color:var(--sand); font-style:italic; }
+
+@media print {
+  body { background:#fff; }
+  .hero, .bars, .acts, .backlink, footer, .fallback { display:none !important; }
+  .wrap { max-width:none; padding:0; }
+  .card, .mapline { break-inside:avoid; }
+  #card { display:block !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <img src="../assets/recognise-banner.jpg" alt="Recognise" width="1280" height="581">
+  <div class="bars"><i></i><i></i><i></i><i></i></div>
+</div>
+
+<div class="wrap">
+
+<section id="s-intro">
+  <p class="eyebrow">Recognise · Companion One</p>
+  <h1>The Sixteen Loop Maps</h1>
+  <p class="standfirst">Sixteen maps. You need one.</p>
+  <hr class="rule">
+  <h2>How To Use These</h2>
+  <div>
+        <p>You have The Loop Map. Six stations, one turn of your own loop, worked backwards from the result because the result is the part you can already see.</p>
+        <p>The hard part was never the map. The hard part is sitting in front of a blank page with nine patterns lit and no idea which one to write about.</p>
+        <p>So this is the same map, sixteen times, already started. One for each pattern in Sixteen. Find the number that was most yours, turn to that page, and three of the six stations are already underway.</p>
+        <p>The starter lines are not your answers. They are what this pattern usually sounds like, put there so the page stops being blank. Cross them out. Write over them. Argue with them. The argument is often where your real answer lives.</p>
+  </div>
+  <div class="card">
+    <h3 style="margin-bottom:12px">One Map</h3>
+        <p>Do not work through all sixteen.</p>
+        <p>These are not a program and they are not a curriculum. They are sixteen starting points so you can find your one loop faster, and one loop, mapped properly, is the whole of this work.</p>
+        <p>If you map three you will have three interesting pages. If you map one and sit with it for a week, something moves.</p>
+        <p>Pick the one that made your chest go tight when you read it. That is not a coincidence and it is not a preference. It is a signal.</p>
+  </div>
+  <div class="card plain">
+    <p class="label">Before you start</p>
+    <p style="margin:0">Nothing on this page is saved. Close the tab and it is gone, which is
+    deliberate. Download your map before you leave, or write it onto the paper one.</p>
+  </div>
+  <div class="acts"><button class="btn" id="go">Find my pattern</button></div>
+</section>
+
+<section id="s-pick" hidden>
+  <p class="eyebrow">Recognise · Companion One</p>
+  <h2>Which one was most yours</h2>
+  <p class="cap">Pick the one that made your chest go tight when you read it. That is not a
+  preference, it is a signal.</p>
+  <ul class="grid" id="grid"></ul>
+  <button class="backlink" id="pick-back">Back</button>
+</section>
+
+<section id="s-station" hidden>
+  <div class="meta"><span id="st-count"></span><span id="st-pattern"></span></div>
+  <div class="track"><i id="st-bar"></i></div>
+  <div class="station">
+    <span class="badge" id="st-badge"></span>
+    <div style="flex:1">
+      <h3 id="st-label"></h3>
+      <p class="prompt" id="st-prompt"></p>
+    </div>
+  </div>
+  <div class="card" id="st-hint" hidden>
+    <p class="label" id="st-hint-label"></p>
+    <p class="starter" id="st-hint-text"></p>
+    <p class="cap" style="margin:14px 0 0">Not your answer. Cross it out, write over it, argue
+    with it. The argument is often where your real answer lives.</p>
+  </div>
+  <div style="margin-top:26px">
+    <textarea id="st-text" placeholder="In your own words."></textarea>
+  </div>
+  <div class="acts"><button class="btn" id="st-next"></button></div>
+  <button class="backlink" id="st-back">Back</button>
+</section>
+
+<section id="s-map" hidden>
+  <div id="card">
+    <p class="eyebrow" id="map-n"></p>
+    <h1 id="map-name" style="margin-bottom:8px"></h1>
+    <p class="standfirst" id="map-moment"></p>
+    <hr class="rule">
+    <div id="map-lines"></div>
+  </div>
+
+  <div class="card">
+        <p>Read it once, out loud, the whole way round. Out loud matters. A loop read silently stays a thought, and it has been a thought for years already.</p>
+        <p>Then say the line at the bottom of your Loop Map and mean it.</p>
+        <p>You have the shape of it now. One loop, six stations, in your own handwriting. That is what Recognise was for, and you have done it.</p>
+  </div>
+  <div class="card plain"><p class="pull">I see you. This loop was never who I am. It was a setting, and settings change.</p></div>
+
+  <div class="acts">
+    <button class="btn" id="save">Download my map</button>
+    <button class="btn ghost" id="restart">Map a different one</button>
+  </div>
+  <p class="cap" style="margin-top:20px">One is enough, and one is the point. Three mapped loops
+  is three interesting pages. One, sat with for a week, is the thing that moves.</p>
+  <p class="fallback" id="fallback" hidden>If the download does not start, screenshot this card, or
+  open the page in Safari or Chrome rather than the in-app browser.</p>
+</section>
+
+<footer>
+  <span>Recognise · Angie Marie Global</span>
+  <span>Abundance is your baseline</span>
+</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+"use strict";
+var MAPS = [{"n": "01", "name": "Burnout", "moment": "You leaned on the horn at a stranger by 7:45am.", "result": "The people closest to me get the worst of me. The people who pay me get the best.", "action": "Absorbing the week alone. Not asking. Carrying it until it leaks sideways onto whoever is nearest.", "emotion": "A spark near a short fuse. Underneath the flare it is usually closer to dread than to anger.", "thought": "just get through this week", "belief": "it all falls apart without me"}, {"n": "02", "name": "The Pleaser", "moment": "You said yes to the extra swing before you told anyone at home.", "result": "A calendar full of things I agreed to before I checked whether I wanted them.", "action": "Yes to the boss, the swing, the stay back. Working out how to explain it on the drive home.", "emotion": "Guilt, arriving the second a no even begins to form.", "thought": "if I say no they will manage without me, and then what am I", "belief": "I matter when I am needed"}, {"n": "03", "name": "The Self Lens", "moment": "Nobody has brought you a problem in months. Only fires, already burning.", "result": "Nobody brings me a problem any more. They bring me fires, already too late to be small.", "action": "Handing down a verdict instead of feedback. Setting a bar nobody clears.", "emotion": "Contempt, arriving in frustration's coat.", "thought": "why can they not keep up", "belief": "my value is my performance, and so is everyone else's"}, {"n": "04", "name": "Communication", "moment": "The fight was not about the dishwasher, and you both knew it by the second sentence.", "result": "A very specific loneliness. The kind that only happens inside a relationship.", "action": "Having the argument about the dishwasher instead of the argument underneath it.", "emotion": "Resentment gone quiet, which is not the same as resentment gone.", "thought": "it is not worth the fight", "belief": "if I say what I actually need, it will cost me"}, {"n": "05", "name": "The Urgency Addict", "moment": "You checked your email before your feet touched the floor.", "result": "No hour of the day that is genuinely mine, including the ones I am not working.", "action": "Just checking. The phone at dinner, the laptop on the holiday, the inbox at 5:30am in the dark.", "emotion": "A low hum of alarm that has started to feel like being alive.", "thought": "I will just check", "belief": "if I am not on it, it burns down"}, {"n": "06", "name": "The Martyr", "moment": "Three people offered to help and you said no to all of them.", "result": "I do all of it, and by Sunday night I cannot look at any of them.", "action": "Refusing every offer, then doing it alone, then counting what it cost.", "emotion": "Resentment with no voice and nowhere to put itself.", "thought": "nobody else will do it properly, fine, I will", "belief": "love and respect are earned by sacrifice"}, {"n": "07", "name": "The Controller", "moment": "You redid the apprentice's work at 9pm and told yourself it was faster.", "result": "A team that has quietly stopped trying, and a workload that never goes down.", "action": "Redoing finished work. Repacking a packed bag. Taking it back the moment it wobbles.", "emotion": "Tension, every single time it leaves my hands.", "thought": "it is faster to do it myself", "belief": "nobody does it right, and my worth is in the doing"}, {"n": "08", "name": "The Peacekeeper", "moment": "It's fine, you said. Full sentence. Three weeks running.", "result": "Weeks of fine, and then a detonation nobody saw coming, over something small.", "action": "It's fine. Whatever you want. Letting it go, again, and calling that maturity.", "emotion": "Frustration swallowed, and the gap quietly widening.", "thought": "let it go, it is not worth it", "belief": "honesty costs the relationship"}, {"n": "09", "name": "The Prover", "moment": "You got the five year thing. You were flat by Tuesday.", "result": "A highlight reel that feels like static, and enough never once arriving.", "action": "Skipping the celebration. Starting the next thing before the first one is cold.", "emotion": "A short hit at the win, and then nothing.", "thought": "I will rest when I get there", "belief": "I am what I achieve"}, {"n": "10", "name": "The Perfectionist Stall", "moment": "The quote has been written for eleven days. It is still in drafts.", "result": "The thing never ships. The opportunity expires in the polishing.", "action": "Writing the fourth version. Moving the date. Not sending the quote.", "emotion": "Dread about being watched mid process.", "thought": "it is not ready yet", "belief": "if it is not perfect, I will be seen failing"}, {"n": "11", "name": "The Numb-Out", "moment": "10:47pm, two hours into the phone, alarm set for 4:45.", "result": "I wake more tired than I went to bed, and I have started calling that hour the best part of the day.", "action": "The scroll. The third glass on a Tuesday. The rubbish on the screen past midnight.", "emotion": "Depletion, turning up in relaxation's costume.", "thought": "I have earned this", "belief": "this is the only relief on offer"}, {"n": "12", "name": "The Escape Fantasy", "moment": "You googled cabins on your lunch break again.", "result": "The fantasy gets fed. The design never changes.", "action": "Cabins at lunch. That feeling driving past the airport. The half worked out lotto plan.", "emotion": "Longing, building, with nowhere to put itself.", "thought": "one day we will sell it all", "belief": "the real thing is out of reach for people like me"}, {"n": "13", "name": "The Busy Addict", "moment": "Day two of the holiday and you were already itchy.", "result": "No space left for anything to arrive, and no space left for anything to repair.", "action": "Filling every gap. The phone at the film. Reorganising the pantry mid conversation.", "emotion": "Restlessness, arriving the instant nothing is required of me.", "thought": "I will just get one more thing done", "belief": "empty time is wasted time, and stillness is not safe"}, {"n": "14", "name": "The Armour", "moment": "I'm fine, said to everyone, meant for no one.", "result": "Nobody knows me, and the isolation becomes the proof that nobody can be let in.", "action": "Never asking. Never receiving. Deflecting every are you okay.", "emotion": "Loneliness inside a full house.", "thought": "I will handle it myself", "belief": "needing is weakness"}, {"n": "15", "name": "The 3am Board Meeting", "moment": "3:14am, wide awake, winning an argument with someone who is asleep.", "result": "Exhausted mornings, and the conversations still never happen out loud.", "action": "Replaying the meeting. Rehearsing the conversation. Running tomorrow before it arrives.", "emotion": "Wired tiredness. Alarm with no event attached to it.", "thought": "let me run it once more", "belief": "if I stop scanning, I will get caught out"}, {"n": "16", "name": "The Flatline", "moment": "You smiled for the photo and felt nothing.", "result": "A life that photographs beautifully and feels like static.", "action": "Deflecting the congratulations. Back at the desk in the morning.", "emotion": "Nothing, sitting exactly where something should be.", "thought": "on to the next", "belief": "feeling it is not safe, or not the point"}];
+var STATIONS = [["The result I keep getting", "The thing that keeps happening, plainly stated."], ["The action that produces it", "What I do, or do not do, that builds this result."], ["The emotion driving the action", "What I am feeling in the moment the action takes the wheel."], ["The thought under the emotion", "The sentence that arrives just before the feeling. Word for word."], ["The belief under the thought", "The older sentence underneath, the one that sounds like a fact."], ["The reality it keeps proving", "The life this loop keeps building, and calling normal."]];
+var STARTER_LABEL = "Often sounds like";
+var NUDGE_LABEL = "For this one it usually sits near";
+
+/* One map, one sitting, nothing kept. These three variables are the whole of
+   the state, and they die with the tab. See THE CONTAINMENT RULE: a page that
+   remembers a person's loop across weeks is the practice layer, and the
+   practice layer is Baseline, not a companion. */
+var picked = null;
+var step = 0;
+var answers = ["", "", "", "", "", ""];
+
+function $(id) { return document.getElementById(id); }
+function show(id) {
+  ["s-intro", "s-pick", "s-station", "s-map"].forEach(function (s) {
+    $(s).hidden = (s !== id);
+  });
+  window.scrollTo({ top: 0, behavior: "instant" });
+}
+
+/* Stations one to three carry a starter, because that is where people stall on
+   blank paper. Four and five carry a nudge only. Six is bare, deliberately. */
+function hintFor(m, i) {
+  if (i === 0) return [STARTER_LABEL, m.result];
+  if (i === 1) return [STARTER_LABEL, m.action];
+  if (i === 2) return [STARTER_LABEL, m.emotion];
+  if (i === 3) return [NUDGE_LABEL, m.thought];
+  if (i === 4) return [NUDGE_LABEL, m.belief];
+  return null;
+}
+
+function renderGrid() {
+  var g = $("grid");
+  g.innerHTML = "";
+  MAPS.forEach(function (m, i) {
+    var li = document.createElement("li");
+    var b = document.createElement("button");
+    b.className = "tile"; b.type = "button";
+    b.innerHTML = '<b></b><strong></strong><span></span>';
+    b.children[0].textContent = m.n;
+    b.children[1].textContent = m.name;
+    b.children[2].textContent = m.moment;
+    b.onclick = function () {
+      picked = i; step = 0; answers = ["", "", "", "", "", ""];
+      renderStation(); show("s-station");
+    };
+    li.appendChild(b); g.appendChild(li);
+  });
+}
+
+function renderStation() {
+  var m = MAPS[picked], s = STATIONS[step], h = hintFor(m, step);
+  $("st-count").textContent = "Station " + (step + 1) + " of 6";
+  $("st-pattern").textContent = m.n + " " + m.name;
+  $("st-bar").style.width = ((step + 1) / 6 * 100) + "%";
+  $("st-badge").textContent = String(step + 1);
+  $("st-label").textContent = s[0];
+  $("st-prompt").textContent = s[1];
+  if (h) {
+    $("st-hint").hidden = false;
+    $("st-hint-label").textContent = h[0];
+    $("st-hint-text").textContent = h[1];
+  } else {
+    $("st-hint").hidden = true;
+  }
+  $("st-text").value = answers[step];
+  $("st-next").textContent = step === 5 ? "See the whole loop" : "Next station";
+  $("st-back").textContent = step === 0 ? "Pick a different pattern" : "Back";
+}
+
+function keep() { answers[step] = $("st-text").value; }
+
+function renderMap() {
+  var m = MAPS[picked];
+  $("map-n").textContent = "Pattern " + m.n;
+  $("map-name").textContent = m.name;
+  $("map-moment").textContent = m.moment;
+  var box = $("map-lines");
+  box.innerHTML = "";
+  STATIONS.forEach(function (s, i) {
+    var wrap = document.createElement("div");
+    wrap.className = "mapline";
+    var head = document.createElement("div");
+    head.className = "station";
+    var badge = document.createElement("span");
+    badge.className = "badge"; badge.textContent = String(i + 1);
+    var col = document.createElement("div"); col.style.flex = "1";
+    var h = document.createElement("h3"); h.textContent = s[0];
+    col.appendChild(h);
+    head.appendChild(badge); head.appendChild(col);
+    var a = document.createElement("p");
+    a.className = "answer" + (answers[i].trim() ? "" : " blank");
+    a.textContent = answers[i].trim() || "Left blank.";
+    wrap.appendChild(head); wrap.appendChild(a);
+    box.appendChild(wrap);
+  });
+  show("s-map");
+}
+
+function stamp() {
+  var d = new Date();
+  return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") +
+    "-" + String(d.getDate()).padStart(2, "0");
+}
+
+function save() {
+  var name = "recognise-loop-map-" + MAPS[picked].n + "-" + stamp() + ".pdf";
+  if (typeof html2pdf === "undefined") {
+    $("fallback").hidden = false; window.print(); return;
+  }
+  html2pdf().set({
+    filename: name, margin: 12,
+    image: { type: "jpeg", quality: 0.94 },
+    html2canvas: { scale: 2, backgroundColor: "#FBF7EE", useCORS: true },
+    jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+  }).from($("card")).save().catch(function () { $("fallback").hidden = false; });
+}
+
+$("go").onclick = function () { renderGrid(); show("s-pick"); };
+$("pick-back").onclick = function () { show("s-intro"); };
+$("st-next").onclick = function () {
+  keep();
+  if (step < 5) { step++; renderStation(); window.scrollTo({top:0,behavior:"instant"}); }
+  else { renderMap(); }
+};
+$("st-back").onclick = function () {
+  keep();
+  if (step > 0) { step--; renderStation(); window.scrollTo({top:0,behavior:"instant"}); }
+  else { renderGrid(); show("s-pick"); }
+};
+$("save").onclick = save;
+$("restart").onclick = function () {
+  picked = null; step = 0; answers = ["", "", "", "", "", ""];
+  renderGrid(); show("s-pick");
+};
+</script>
+</body>
+</html>
