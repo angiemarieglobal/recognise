@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- The Belief List v1.1, built 21 September 2026. Recognise companion two. -->
+<!-- The Belief List v1.2, built 22 September 2026. Recognise companion two. -->
 <html lang="en-AU">
 <head>
 <meta charset="utf-8">
@@ -28,13 +28,13 @@ img { max-width:100%; display:block; }
 [hidden] { display:none !important; }
 .wrap { max-width:720px; margin:0 auto; padding:0 var(--pad) 72px; }
 
-.hero img { width:100%; height:auto; }
-.bars { display:flex; height:8px; }
-.bars i { flex:1; }
-.bars i:nth-child(1) { background:var(--clay); }
-.bars i:nth-child(2) { background:var(--gold); }
-.bars i:nth-child(3) { background:var(--sand); }
-.bars i:nth-child(4) { background:var(--ivory); }
+/* THE NO STRIP RULE, locked 22 September 2026. Earlier builds put four solid
+   colour bars under the banner. That strip was invented here, it is on no AMG
+   master asset, and the Sand Stone band in it read as a pink line. Angie called
+   it and she was right. Her Loop Map has no strip: the photograph dissolves
+   into the page ground, and the banner now carries that fade baked into itself.
+   Nothing goes underneath it. */
+.hero img { width:100%; height:auto; display:block; }
 
 .eyebrow {
   font-family:var(--sans); font-weight:500; font-size:11px;
@@ -152,7 +152,7 @@ footer { border-top:1px solid var(--ivory); margin-top:60px; padding-top:22px;
 
 @media print {
   body { background:#fff; }
-  .hero, .bars, .acts, .backlink, footer, .fallback { display:none !important; }
+  .hero, .acts, .backlink, footer, .fallback { display:none !important; }
   .wrap { max-width:none; padding:0; }
   .card, .mapline { break-inside:avoid; }
   #card { display:block !important; }
@@ -162,8 +162,7 @@ footer { border-top:1px solid var(--ivory); margin-top:60px; padding-top:22px;
 <body>
 
 <div class="hero">
-  <img src="../assets/recognise-banner.jpg" alt="Recognise" width="1280" height="581">
-  <div class="bars"><i></i><i></i><i></i><i></i></div>
+  <img src="../assets/recognise-banner.jpg" alt="Recognise" width="1653" height="925">
 </div>
 
 <div class="wrap">
