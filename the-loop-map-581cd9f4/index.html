@@ -1,0 +1,352 @@
+<!doctype html>
+<!-- The Loop Map v1.0, built 22 September 2026. Recognise worksheet one. -->
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Loop Map · Recognise</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold:#D09E69; --umber:#5D3520; --clay:#8A6238; --sand:#B7A184;
+  --ivory:#E6DAC2; --oat:#F2E9D5; --pale:#FBF7EE; --espresso:#2A1711;
+  --serif:'Forum', 'Georgia', 'Times New Roman', serif;
+  --sans:'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --pad:clamp(20px, 5vw, 40px);
+}
+* { box-sizing:border-box; }
+html { -webkit-text-size-adjust:100%; }
+body {
+  margin:0; background:var(--pale); color:var(--espresso);
+  font-family:var(--sans); font-weight:300; font-size:16px; line-height:1.66;
+}
+img { max-width:100%; display:block; }
+[hidden] { display:none !important; }
+.wrap { max-width:720px; margin:0 auto; padding:0 var(--pad) 72px; }
+
+/* THE NO STRIP RULE, locked 22 September 2026. Earlier builds put four solid
+   colour bars under the banner. That strip was invented here, it is on no AMG
+   master asset, and the Sand Stone band in it read as a pink line. Angie called
+   it and she was right. Her Loop Map has no strip: the photograph dissolves
+   into the page ground, and the banner now carries that fade baked into itself.
+   Nothing goes underneath it. */
+.hero img { width:100%; height:auto; display:block; }
+
+.eyebrow {
+  font-family:var(--sans); font-weight:500; font-size:11px;
+  letter-spacing:.28em; text-transform:uppercase; color:var(--clay);
+  margin:34px 0 10px;
+}
+h1 { font-family:var(--serif); font-weight:400; color:var(--umber);
+     font-size:clamp(32px, 7.4vw, 50px); line-height:1.08; margin:0 0 18px; }
+h2 { font-family:var(--serif); font-weight:400; color:var(--umber);
+     font-size:clamp(24px, 5.4vw, 34px); line-height:1.16; margin:0 0 14px; }
+h3 { font-family:var(--serif); font-weight:400; color:var(--umber);
+     font-size:clamp(21px, 4.6vw, 27px); line-height:1.2; margin:0; }
+.standfirst { font-family:var(--serif); font-style:italic; color:var(--clay);
+  font-size:clamp(19px, 4.2vw, 23px); line-height:1.4; margin:0 0 22px; }
+.rule { width:64px; height:2px; background:var(--gold); border:0; margin:0 0 30px; }
+p { margin:0 0 17px; }
+p:last-child { margin-bottom:0; }
+
+.card { background:var(--oat); border-left:3.5px solid var(--gold);
+  padding:clamp(20px, 4.4vw, 30px); margin:26px 0; }
+.card.plain { border-left-color:var(--ivory); }
+.pull { font-family:var(--serif); font-size:clamp(18px, 4vw, 21px);
+  line-height:1.45; color:var(--umber); }
+
+.btn { display:inline-block; border:0; cursor:pointer; font-family:var(--sans);
+  font-weight:600; font-size:12px; letter-spacing:.2em; text-transform:uppercase;
+  padding:19px 38px; background:var(--umber); color:var(--pale);
+  text-decoration:none; transition:background .16s ease; }
+.btn:hover { background:var(--espresso); }
+.btn.ghost { background:transparent; color:var(--clay);
+  box-shadow:inset 0 0 0 1.5px var(--ivory); }
+.btn.ghost:hover { background:var(--oat); color:var(--umber); }
+/* A disabled button gets a lighter palette colour, never opacity. Fading umber
+   over oat lands on grey, and there is no grey anywhere else in Recognise. */
+.btn[disabled] { background:var(--sand); color:var(--pale); cursor:not-allowed; }
+.btn[disabled]:hover { background:var(--sand); }
+.acts { display:flex; flex-wrap:wrap; gap:14px; margin-top:32px; }
+.backlink { background:none; border:0; cursor:pointer; padding:10px 0;
+  margin-top:26px; font-family:var(--sans); font-size:11px; font-weight:500;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--sand); }
+.backlink:hover { color:var(--clay); }
+
+.meta { display:flex; justify-content:space-between; align-items:baseline;
+  font-size:10.5px; font-weight:500; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--sand); margin:30px 0 12px; }
+.track { height:3px; background:var(--ivory); margin-bottom:34px; }
+.track i { display:block; height:100%; background:var(--gold);
+  transition:width .3s ease; }
+
+.opts { list-style:none; margin:0; padding:0; }
+.opt { width:100%; text-align:left; cursor:pointer; display:flex; gap:15px;
+  align-items:flex-start; background:var(--pale); color:var(--espresso);
+  border:0; box-shadow:inset 0 0 0 1.5px var(--ivory);
+  padding:17px 20px; margin-bottom:11px; font-family:var(--serif);
+  font-size:clamp(17px, 3.9vw, 19.5px); line-height:1.35;
+  transition:box-shadow .14s ease, background .14s ease; }
+.opt:hover { box-shadow:inset 0 0 0 1.5px var(--sand); }
+.opt .box { flex:0 0 auto; width:19px; height:19px; margin-top:3px;
+  box-shadow:inset 0 0 0 1.5px var(--sand); background:var(--pale);
+  position:relative; }
+.opt[aria-pressed="true"] { background:var(--oat);
+  box-shadow:inset 0 0 0 1.5px var(--gold); }
+.opt[aria-pressed="true"] .box { background:var(--gold);
+  box-shadow:inset 0 0 0 1.5px var(--gold); }
+.opt[aria-pressed="true"] .box::after { content:""; position:absolute;
+  left:6px; top:2px; width:5px; height:10px; border:solid #FBF7EE;
+  border-width:0 2px 2px 0; transform:rotate(43deg); }
+.cap { font-size:13px; color:var(--clay); margin:-4px 0 22px; }
+
+.label { font-size:10.5px; font-weight:500; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--gold); margin:0 0 9px; }
+textarea { width:100%; min-height:132px; resize:vertical; background:var(--pale);
+  border:0; box-shadow:inset 0 0 0 1.5px var(--ivory); padding:15px 17px;
+  font-family:var(--serif); font-size:18px; line-height:1.5;
+  color:var(--espresso); }
+textarea:focus { outline:0; box-shadow:inset 0 0 0 1.5px var(--gold); }
+
+footer { border-top:1px solid var(--ivory); margin-top:60px; padding-top:22px;
+  font-size:10.5px; font-weight:500; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--sand);
+  display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+.fallback { font-size:13px; color:var(--clay); margin-top:14px; }
+
+/* ---- the sixteen picker --------------------------------------------- */
+.grid { list-style:none; margin:0; padding:0; display:grid; gap:11px;
+  grid-template-columns:1fr; }
+@media (min-width:560px) { .grid { grid-template-columns:1fr 1fr; } }
+.tile { width:100%; text-align:left; cursor:pointer; background:var(--pale);
+  border:0; box-shadow:inset 0 0 0 1.5px var(--ivory); padding:16px 18px;
+  transition:box-shadow .14s ease, background .14s ease; height:100%; }
+.tile:hover { background:var(--oat); box-shadow:inset 0 0 0 1.5px var(--gold); }
+.tile b { display:block; font-family:var(--serif); font-weight:400;
+  font-size:13px; color:var(--gold); letter-spacing:.06em; margin-bottom:3px; }
+.tile strong { display:block; font-family:var(--serif); font-weight:400;
+  font-size:21px; color:var(--umber); line-height:1.2; margin-bottom:5px; }
+.tile span { display:block; font-family:var(--sans); font-style:italic;
+  font-size:12.5px; line-height:1.45; color:var(--clay); }
+
+/* ---- the station walk ------------------------------------------------ */
+.station { display:flex; gap:15px; align-items:flex-start; }
+.badge { flex:0 0 auto; width:30px; height:30px; border-radius:50%;
+  background:var(--umber); color:var(--pale); font-family:var(--sans);
+  font-weight:500; font-size:13px; display:flex; align-items:center;
+  justify-content:center; margin-top:2px; }
+.prompt { font-size:13.5px; color:var(--sand); margin:4px 0 0; }
+.starter { font-family:var(--serif); font-style:italic; font-size:17px;
+  line-height:1.45; color:var(--clay); margin:0; }
+
+/* ---- the finished map ------------------------------------------------ */
+.mapline { border-top:1px solid var(--ivory); padding-top:18px; margin-top:18px; }
+.mapline:first-of-type { border-top:0; padding-top:0; margin-top:0; }
+.answer { font-family:var(--serif); font-size:18.5px; line-height:1.5;
+  color:var(--espresso); margin:7px 0 0; white-space:pre-wrap; }
+.answer.blank { color:var(--sand); font-style:italic; }
+
+@media print {
+  body { background:#fff; }
+  .hero, .acts, .backlink, footer, .fallback { display:none !important; }
+  .wrap { max-width:none; padding:0; }
+  .card, .mapline { break-inside:avoid; }
+  #card { display:block !important; }
+}
+
+/* ---- the loop wheel -------------------------------------------------- */
+.wheel { margin:34px 0 8px; }
+.wheel svg { width:100%; height:auto; display:block; }
+.wheel text { font-family:'Forum', Georgia, serif; }
+.wheel .num  { font-family:'Montserrat', sans-serif; font-weight:500;
+               font-size:9px; letter-spacing:.18em; fill:#D09E69; }
+.wheel .nm   { font-size:19px; fill:#FBF7EE; }
+.wheel .tag  { font-family:'Montserrat', sans-serif; font-weight:500;
+               font-size:6.6px; letter-spacing:.2em; fill:#D09E69; }
+.wheel .mid  { font-size:26px; fill:#5D3520; }
+.wheel .midlabel { font-family:'Montserrat', sans-serif; font-weight:500;
+               font-size:7.4px; letter-spacing:.3em; fill:#8A6238; }
+.wheel .midcap { font-style:italic; font-size:11px; fill:#8A6238; }
+.wheel .hint { font-family:'Montserrat', sans-serif; font-weight:500;
+               font-size:7.6px; letter-spacing:.2em; fill:#8A6238; }
+
+/* ---- station cards ---------------------------------------------------- */
+.st { border-top:1px solid var(--ivory); padding-top:26px; margin-top:26px; }
+.st:first-of-type { border-top:0; padding-top:0; margin-top:0; }
+.sthead { display:flex; gap:15px; align-items:flex-start; }
+.badge { flex:0 0 auto; width:30px; height:30px; border-radius:50%;
+  background:var(--umber); color:var(--pale); font-family:var(--sans);
+  font-weight:500; font-size:13px; display:flex; align-items:center;
+  justify-content:center; margin-top:2px; }
+.prompt { font-size:13.5px; color:var(--sand); margin:4px 0 0; }
+.eg { font-family:var(--serif); font-style:italic; font-size:16px;
+  line-height:1.45; color:var(--clay); margin:12px 0 0; }
+.answer { font-family:var(--serif); font-size:18.5px; line-height:1.5;
+  color:var(--espresso); margin:7px 0 0; white-space:pre-wrap; }
+.answer.blank { color:var(--sand); font-style:italic; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <img src="../assets/recognise-banner.jpg" alt="Recognise" width="1653" height="925">
+</div>
+
+<div class="wrap">
+
+<section id="s-intro">
+  <p class="eyebrow">Recognise · Worksheet One</p>
+  <h1>The Loop Map</h1>
+  <p class="standfirst">Map one loop. Pen and paper, first answers, no polish. Work backwards from the result, because the result is the part you can already see.</p>
+  <hr class="rule">
+
+  <div class="wheel"><svg viewBox="0 0 560 400" role="img" aria-label="The loop, six stations"><line x1="318.1" y1="96.0" x2="354.5" y2="117.0" stroke="#D09E69" stroke-width="1.2"/><line x1="354.5" y1="117.0" x2="350.4" y2="110.0" stroke="#D09E69" stroke-width="1.2"/><line x1="354.5" y1="117.0" x2="346.4" y2="117.0" stroke="#D09E69" stroke-width="1.2"/><line x1="203.8" y1="118.0" x2="240.2" y2="97.0" stroke="#D09E69" stroke-width="1.2"/><line x1="240.2" y1="97.0" x2="232.1" y2="97.0" stroke="#D09E69" stroke-width="1.2"/><line x1="240.2" y1="97.0" x2="236.1" y2="104.0" stroke="#D09E69" stroke-width="1.2"/><line x1="165.7" y1="228.0" x2="165.7" y2="186.0" stroke="#D09E69" stroke-width="1.2"/><line x1="165.7" y1="186.0" x2="161.7" y2="193.0" stroke="#D09E69" stroke-width="1.2"/><line x1="165.7" y1="186.0" x2="169.7" y2="193.0" stroke="#D09E69" stroke-width="1.2"/><line x1="241.9" y1="316.0" x2="205.5" y2="295.0" stroke="#D09E69" stroke-width="1.2"/><line x1="205.5" y1="295.0" x2="209.6" y2="302.0" stroke="#D09E69" stroke-width="1.2"/><line x1="205.5" y1="295.0" x2="213.6" y2="295.0" stroke="#D09E69" stroke-width="1.2"/><line x1="356.2" y1="294.0" x2="319.8" y2="315.0" stroke="#D09E69" stroke-width="1.2"/><line x1="319.8" y1="315.0" x2="327.9" y2="315.0" stroke="#D09E69" stroke-width="1.2"/><line x1="319.8" y1="315.0" x2="323.9" y2="308.0" stroke="#D09E69" stroke-width="1.2"/><line x1="394.3" y1="184.0" x2="394.3" y2="226.0" stroke="#D09E69" stroke-width="1.2"/><line x1="394.3" y1="226.0" x2="398.3" y2="219.0" stroke="#D09E69" stroke-width="1.2"/><line x1="394.3" y1="226.0" x2="390.3" y2="219.0" stroke="#D09E69" stroke-width="1.2"/><text class="midlabel" x="280.0" y="192.0" text-anchor="middle">THE LOOP</text><text class="mid" x="280.0" y="220.0" text-anchor="middle">MAP</text><text class="midcap" x="280.0" y="240.0" text-anchor="middle">one turn of your own loop</text><circle cx="280.0" cy="74.0" r="40" fill="#5D3520"/><text class="num" x="280.0" y="60.0" text-anchor="middle">01</text><text class="nm" x="280.0" y="80.0" text-anchor="middle">Result</text><text class="tag" x="280.0" y="94.0" text-anchor="middle">THE PROOF</text><circle cx="165.7" cy="140.0" r="40" fill="#5D3520"/><text class="num" x="165.7" y="126.0" text-anchor="middle">02</text><text class="nm" x="165.7" y="146.0" text-anchor="middle">Action</text><text class="tag" x="165.7" y="160.0" text-anchor="middle">THE MOVE</text><circle cx="165.7" cy="272.0" r="40" fill="#5D3520"/><text class="num" x="165.7" y="258.0" text-anchor="middle">03</text><text class="nm" x="165.7" y="278.0" text-anchor="middle">Emotion</text><text class="tag" x="165.7" y="292.0" text-anchor="middle">THE CHARGE</text><circle cx="280.0" cy="338.0" r="40" fill="#5D3520"/><text class="num" x="280.0" y="324.0" text-anchor="middle">04</text><text class="nm" x="280.0" y="344.0" text-anchor="middle">Thought</text><text class="tag" x="280.0" y="358.0" text-anchor="middle">THE SENTENCE</text><circle cx="394.3" cy="272.0" r="40" fill="#5D3520"/><text class="num" x="394.3" y="258.0" text-anchor="middle">05</text><text class="nm" x="394.3" y="278.0" text-anchor="middle">Belief</text><text class="tag" x="394.3" y="292.0" text-anchor="middle">THE SETTING</text><circle cx="394.3" cy="140.0" r="40" fill="#5D3520"/><text class="num" x="394.3" y="126.0" text-anchor="middle">06</text><text class="nm" x="394.3" y="146.0" text-anchor="middle">Reality</text><text class="tag" x="394.3" y="160.0" text-anchor="middle">THE LIFE</text><text class="hint" x="280.0" y="16" text-anchor="middle">START HERE</text><text class="hint" x="14" y="110.0" text-anchor="start">YOU MAP IT BACKWARDS</text></svg></div>
+  <p class="cap" style="margin-top:22px">The loop turns one way. Belief becomes thought, thought becomes emotion, emotion becomes action, action becomes result, and the result becomes the life that proves the belief. You will travel it the other way, starting at the only station you can already see.</p>
+
+  <div class="card plain">
+    <p class="label">Before you start</p>
+    <p style="margin:0">Nothing on this page is saved. Close the tab and it is gone, which is
+    deliberate. Download your map before you leave, or write it onto the paper one.</p>
+  </div>
+  <div class="acts"><button class="btn" id="go">Start at station one</button></div>
+</section>
+
+<section id="s-station" hidden>
+  <div class="meta"><span id="st-count"></span><span>The Loop Map</span></div>
+  <div class="track"><i id="st-bar"></i></div>
+  <div class="sthead">
+    <span class="badge" id="st-badge"></span>
+    <div style="flex:1">
+      <h3 id="st-label"></h3>
+      <p class="prompt" id="st-prompt"></p>
+    </div>
+  </div>
+  <div class="card" id="st-eg" hidden><p class="eg" id="st-eg-text"></p></div>
+  <div style="margin-top:26px">
+    <textarea id="st-text" placeholder="In your own words."></textarea>
+  </div>
+  <div class="acts"><button class="btn" id="st-next"></button></div>
+  <button class="backlink" id="st-back">Back</button>
+</section>
+
+<section id="s-map" hidden>
+  <div id="card">
+    <p class="eyebrow">Recognise · Worksheet One</p>
+    <h1 style="margin-bottom:10px">The Loop Map</h1>
+    <hr class="rule">
+    <div id="map-lines"></div>
+  </div>
+
+  <div class="card">
+    <p class="label">Close the map</p>
+    <p class="pull" style="margin:0">Now read your map once, out loud, and say: I see you. This loop was never who I am. It was a setting, and settings change.</p>
+  </div>
+
+  <div class="acts">
+    <button class="btn" id="save">Download my map</button>
+    <button class="btn ghost" id="restart">Start again</button>
+  </div>
+  <p class="cap" style="margin-top:20px">One loop, six stations, in your own words. That is what
+  Recognise was for, and you have done it.</p>
+  <p class="fallback" id="fallback" hidden>If the download does not start, screenshot this card, or
+  open the page in Safari or Chrome rather than the in-app browser.</p>
+</section>
+
+<footer>
+  <span>Recognise · Angie Marie Global</span>
+  <span>Abundance is your baseline</span>
+</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+"use strict";
+var STATIONS = [["The result I keep getting", "The thing that keeps happening, plainly stated.", null], ["The action that produces it", "What I do, or don't do, that builds this result.", null], ["The emotion driving the action", "What I am feeling in the moment the action takes the wheel.", null], ["The thought under the emotion", "The sentence that arrives just before the feeling. Write it word for word.", null], ["The belief under the thought", "The older sentence underneath, the one that sounds like a fact.", "Rest isn't safe. Wanting leads to losing. I am only loved when I am useful. Write yours."], ["The reality it keeps proving", "The life this loop keeps building, and calling normal.", null]];
+
+/* Six answers, one sitting, nothing kept. */
+var step = 0;
+var answers = ["", "", "", "", "", ""];
+
+function $(id) { return document.getElementById(id); }
+function show(id) {
+  ["s-intro", "s-station", "s-map"].forEach(function (s) { $(s).hidden = (s !== id); });
+  window.scrollTo({ top: 0, behavior: "instant" });
+}
+
+function renderStation() {
+  var s = STATIONS[step];
+  $("st-count").textContent = "Station " + (step + 1) + " of 6";
+  $("st-bar").style.width = ((step + 1) / 6 * 100) + "%";
+  $("st-badge").textContent = String(step + 1);
+  $("st-label").textContent = s[0];
+  $("st-prompt").textContent = s[1];
+  if (s[2]) { $("st-eg").hidden = false; $("st-eg-text").textContent = s[2]; }
+  else { $("st-eg").hidden = true; }
+  $("st-text").value = answers[step];
+  $("st-next").textContent = step === 5 ? "See the whole loop" : "Next station";
+  $("st-back").textContent = step === 0 ? "Back to the start" : "Back";
+}
+
+function keep() { answers[step] = $("st-text").value; }
+
+function renderMap() {
+  var box = $("map-lines");
+  box.innerHTML = "";
+  STATIONS.forEach(function (s, i) {
+    var wrap = document.createElement("div");
+    wrap.className = "st";
+    var head = document.createElement("div");
+    head.className = "sthead";
+    var badge = document.createElement("span");
+    badge.className = "badge"; badge.textContent = String(i + 1);
+    var col = document.createElement("div"); col.style.flex = "1";
+    var h = document.createElement("h3"); h.textContent = s[0];
+    col.appendChild(h);
+    head.appendChild(badge); head.appendChild(col);
+    var a = document.createElement("p");
+    a.className = "answer" + (answers[i].trim() ? "" : " blank");
+    a.textContent = answers[i].trim() || "Left blank.";
+    wrap.appendChild(head); wrap.appendChild(a);
+    box.appendChild(wrap);
+  });
+  show("s-map");
+}
+
+function stamp() {
+  var d = new Date();
+  return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") +
+    "-" + String(d.getDate()).padStart(2, "0");
+}
+
+function save() {
+  if (typeof html2pdf === "undefined") { $("fallback").hidden = false; window.print(); return; }
+  html2pdf().set({
+    filename: "recognise-the-loop-map-" + stamp() + ".pdf", margin: 12,
+    image: { type: "jpeg", quality: 0.94 },
+    html2canvas: { scale: 2, backgroundColor: "#FBF7EE", useCORS: true },
+    jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+  }).from($("card")).save().catch(function () { $("fallback").hidden = false; });
+}
+
+$("go").onclick = function () { step = 0; renderStation(); show("s-station"); };
+$("st-next").onclick = function () {
+  keep();
+  if (step < 5) { step++; renderStation(); window.scrollTo({top:0,behavior:"instant"}); }
+  else { renderMap(); }
+};
+$("st-back").onclick = function () {
+  keep();
+  if (step > 0) { step--; renderStation(); window.scrollTo({top:0,behavior:"instant"}); }
+  else { show("s-intro"); }
+};
+$("save").onclick = save;
+$("restart").onclick = function () {
+  step = 0; answers = ["", "", "", "", "", ""]; renderStation(); show("s-intro");
+};
+</script>
+</body>
+</html>
